@@ -47,7 +47,7 @@ Your ```~/``` home directory on your host machine is synced to the ```/host/``` 
 
 The provisioned machine is setup with 2 CPU cores. This can be  modified using the steps below:
 
-Open the *Vagrantfile* and edit the line from 2 to another set the number of Cores:
+Open the *Vagrantfile* and edit the line from 2 to another to set the CPU cores:
 ```
 vb.customize ["modifyvm", :id, "--cpus"  , "2"   ]
 ```
@@ -64,7 +64,7 @@ To check CPU cores has been changes, verify from CLI by running ```top``` or ```
 
 The provisioned machine is setup with with 2GB of RAM. This can be  modified using the steps below:
 
-Open the *Vagrantfile* and edit the line from 2048 to another set te amount of RAM:
+Open the *Vagrantfile* and edit the line from 2048 to another to set RAM:
 ```
 vb.customize ["modifyvm", :id, "--memory", "2048"]
 ```

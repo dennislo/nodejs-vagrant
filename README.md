@@ -12,21 +12,10 @@ This provisioned Vagrant instance is setup with 2 CPU Cores and 2GB RAM.
 ### Install VirtualBox:
 [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 
-## Setup Option 1: Box
+## Setup using Vagrantfile
 
 ```
-mkdir DIR && cd DIR
-vagrant init cbumgard/nodejs
-vagrant up
-vagrant ssh
-```
-
-For more see: [https://vagrantcloud.com/cbumgard/nodejs](https://vagrantcloud.com/cbumgard/nodejs)
-
-## Setup Option 2: Vagrantfile
-
-```
-git clone git@github.com:cbumgard/nodejs-vagrant.git
+git clone git@github.com:dennislo/nodejs-vagrant.git
 cd nodejs-vagrant
 vagrant up
 vagrant ssh

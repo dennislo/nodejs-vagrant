@@ -2,6 +2,8 @@
 
 Provisions a clean Ubuntu 12.04 32-bit server instance with all needed Node.js development tools (Node.js, git, vim); services (MongoDB, Redis, GitHub, Heroku, Travis-CI, Compass 'requires Ruby', Yeoman).
 
+This provisioned Vagrant instance is setup with 2 CPU Cores and 2GB RAM.
+
 ## Install Vagrant & VirtualBox
 
 ### Install Vagrant 1.5:
@@ -30,8 +32,6 @@ vagrant up
 vagrant ssh
 ```
 
-Done! 
-
 ## Post-Setup
 
 ### Vagrant user
@@ -41,6 +41,40 @@ By default the ```vagrant``` user is configured with password 'vagrant'. The vag
 ### Edit code on host machine, build in VM
 
 Your ```~/``` home directory on your host machine is synced to the ```/host/``` directory inside of Vagrant. So for example you can edit code in ```~/code/``` on your laptop and build it inside a Vagrant shell inside ```/host/code```.
+
+
+### Change number of CPU cores:
+
+The provisioned machine is setup with 2 CPU cores. This can be  modified using the steps below:
+
+Open the *Vagrantfile* and edit the line from 2 to another set the number of Cores:
+```
+vb.customize ["modifyvm", :id, "--cpus"  , "2"   ]
+```
+
+then reload the machine
+```
+vagrant ssh
+```
+
+To check CPU cores has been changes, verify from CLI by running ```top``` or ```free -m```
+
+
+### Change amount of RAM:
+
+The provisioned machine is setup with with 2GB of RAM. This can be  modified using the steps below:
+
+Open the *Vagrantfile* and edit the line from 2048 to another set te amount of RAM:
+```
+vb.customize ["modifyvm", :id, "--memory", "2048"]
+```
+
+then reload the machine
+```
+vagrant ssh
+```
+
+To check RAM has been changes, verify from CLI by running ```top``` or ```free -m```
 
 ### Networking:
 

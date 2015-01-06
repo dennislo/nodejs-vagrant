@@ -118,4 +118,4 @@ VBoxManage: error: Context: "int handleCreate(HandlerArg*, int, int*)" at line 6
 
 ## License
 
-[MIT](https://github.com/cbumgard/nodejs-vagrant/blob/master/LICENSE)
+[MIT](https://github.com/dennislo/nodejs-vagrant/blob/master/LICENSE)

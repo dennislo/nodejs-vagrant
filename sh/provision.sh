@@ -39,6 +39,12 @@ hostname nodejs-vagrant
 # Vim settings:
 /vagrant/sh/vim.sh
 
+# Install rvm, ruby and compass (for scss/sass)
+/vagrant/sh/ruby.sh
+
+# Install webapp dependencies:
+/vagrant/sh/webapp-dependencies.sh
+
 touch /etc/vagrant-provisioned
 
 echo "--------------------------------------------------"

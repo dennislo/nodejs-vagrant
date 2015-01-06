@@ -40,13 +40,17 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-  # config.vm.provider :virtualbox do |vb|
+  config.vm.provider :virtualbox do |vb|
   #   # Don't boot with headless mode
   #   vb.gui = true
   #
   #   # Use VBoxManage to customize the VM. For example to change memory:
-  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
-  # end
+  # Set VM with 2GB RAM: http://www.josheaton.org/increase-memory-vagrant-virtual-machine/
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
+  # Set VM with 2 Cores: http://vl4rl.com/2014/06/04/enabling-mulitcpu-vagrant-machines/
+    vb.customize ["modifyvm", :id, "--ioapic", "on"  ]
+    vb.customize ["modifyvm", :id, "--cpus"  , "2"   ]
+  end
   #
   # View the documentation for the provider you're using for more
   # information on available options.

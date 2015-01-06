@@ -1,6 +1,6 @@
 # nodejs-vagrant
 
-Provisions a clean Ubuntu 12.04 32-bit server instance with all needed Node.js development tools (Node.js, git, vim); services (MongoDB, Redis, GitHub, Heroku, Travis-CI, Compass, Grunt, Bower).
+Provisions a clean Ubuntu 12.04 32-bit server instance with all needed Node.js development tools (Node.js, git, vim); services (MongoDB, Redis, GitHub, Heroku, Travis-CI, Compass 'requires Ruby', Yeoman).
 
 ## Install Vagrant & VirtualBox
 
@@ -18,8 +18,6 @@ vagrant init cbumgard/nodejs
 vagrant up
 vagrant ssh
 ```
-
-Done!
 
 For more see: [https://vagrantcloud.com/cbumgard/nodejs](https://vagrantcloud.com/cbumgard/nodejs)
 
@@ -61,7 +59,21 @@ Additionally for convenience, append this line to your ```/etc/hosts``` file:
 
 ### MongoDB & Redis
 
-Verify from CLI by running ```mongo``` and ```redis-cli```.
+Verify from CLI by running ```mongodb``` and ```redis-cli```.
+
+
+### Ruby & Compass
+
+Verify from CLI by running ```ruby``` and ```compass```.
+
+For documentation see: [http://compass-style.org/](http://compass-style.org/)
+
+### Yeoman, Grunt & Bower
+
+Verify from CLI by running ```yo```, ```grunt``` and ```bower```.
+
+For documentation see: [http://yeoman.io/](http://yeoman.io/)
+
 
 ### GitHub
 
